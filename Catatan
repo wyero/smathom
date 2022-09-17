@@ -1,3 +1,5 @@
 register admin :
     http://localhost:3000/register
 
+database dibuat secara manual
+nama database : smathom_db
