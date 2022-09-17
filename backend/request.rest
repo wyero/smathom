@@ -1,0 +1,103 @@
+//GET USERS
+GET http://localhost:8000/users/
+
+###
+//CREATE USERS
+POST http://localhost:8000/users
+Content-Type: application/json
+
+{
+    "nama": "Miliand Dapa",
+    "email": "miliand@gmail.com",
+    "password": "miliand",
+    "ulangiPassword": "miliand",
+    "role": "Admin"
+}
+
+###
+//UPDATE USERS
+PATCH http://localhost:8000/users/3
+Content-Type: application/json
+
+{
+    "nama": "Jack Bei",
+    "email": "jack@gmail.com",
+    "password": "",
+    "ulangiPassword": "",
+    "role": "Siswa"
+}
+
+###
+//DELETE USERS
+DELETE http://localhost:8000/users/2
+
+###
+//LOGIN
+POST http://localhost:8000/login
+Content-Type: application/json
+
+{
+    "email": "wyero@gmail.com",
+    "password": "wyero"
+}
+
+###
+//ME
+GET http://localhost:8000/me
+
+###
+//LOGOUT
+DELETE http://localhost:8000/logout
+
+###
+//GET SCHEDULE
+GET http://localhost:8000/schedule/1
+
+###
+//CREATE SCHEDULE
+POST http://localhost:8000/schedule
+Content-Type: application/json
+
+{
+    "hari":"Selasa",
+    "mulai":"9:30:00",
+    "selesai":"10:30:00",
+    "matpel":"Matematika"
+}
+
+###
+//UPDATE SCHEDULE
+PATCH http://localhost:8000/schedule/2
+Content-Type: application/json
+
+{
+    "hari":"Selasa",
+    "mulai":"9:30:00",
+    "selesai":"10:30:00",
+    "matpel":"Sejarah Indonesia"
+}
+
+###
+//DELETE SCHEDULE
+DELETE http://localhost:8000/schedule/2
+
+###
+//GET COUNT SCHEDULE
+GET http://localhost:8000/count-schedule
+
+###
+//GET COUNT USER
+GET http://localhost:8000/count-user
+
+###
+//POST REGISTER
+POST http://localhost:8000/register
+Content-Type: application/json
+
+{
+    "nama": "Rani Lina",
+    "email": "rani@gmail.com",
+    "password": "rani",
+    "ulangiPassword": "rani",
+    "role": "Admin"
+}

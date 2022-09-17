@@ -1,0 +1,512 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+$font1: 'Open Sans', sans-serif;
+$font2: 'Poppins', sans-serif;
+$btn-color: linear-gradient(135deg, #71b7e6, #9b5966);
+$bg: #021b79;
+
+.login{
+    .login-page{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        .left-login-page{
+            background: url('../../Image/background-smathom.jpg');
+            height: 100vh;
+            width: 75%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            position: sticky;
+            top: 0;
+        }
+        .right-login-page{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 25%;
+            .logo-smathom{
+                width: 210px;
+                cursor: pointer;
+            }
+            p{
+                font-family: $font1;
+                font-size: 40px;
+                font-weight: 800;
+                color: grey;
+                cursor: pointer;
+            }
+            .form-login{
+                form{
+                    .error{
+                        font-size: 17px;
+                        font-family: $font2;
+                        text-align: center;
+                        color: red;
+                    }
+                    .input{
+                        margin: 10px 0;
+                        display: flex;
+                        align-items: center;
+                        .icon{
+                            font-size: 23px;
+                            display: flex;
+                            align-items: center;
+                            position: absolute;
+                            padding: 0 5px;
+                            color: #0a0a0a;
+                            cursor: pointer;
+                        }
+                        input{
+                            width: 230px;
+                            padding: 5px 0 5px 33px;
+                            border-radius: 5px;
+                            border: 1px solid grey;
+                            font-family: $font2;
+                            font-weight: 500;
+                            &:focus{
+                                outline: 1px solid $bg;
+                            }
+                        }
+                        ::-webkit-input-placeholder{
+                            color: #0a0a0a;
+                            opacity: 0.8;
+                        }
+                    }
+                    button{
+                        width: 100%;
+                        margin-top: 10px;
+                        padding: 3px 0;
+                        border-radius: 5px;
+                        border: none;
+                        background: #b92b27;  
+                        background: -webkit-linear-gradient(to left, #1565C0, #b92b27);  
+                        background: linear-gradient(to left, #1565C0, #b92b27);  
+                        color: #fff;
+                        font-family: $font2;
+                        font-size: 17px;
+                        font-weight: 700;
+                        cursor: pointer;
+                        &:hover{
+                            opacity: 0.9;
+                            transition: 0.3s;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.dashboard{
+    width: 100%;
+    background: #f1f1f1;
+    .dashboard-page{
+        width: 100%;
+        display: flex;
+        .left-dashboard{
+            width: 350px;
+            background-color: $bg;
+            height: 100vh;
+            position: sticky;
+            top: 0;
+            .smathom{
+                font-family: $font1;
+                font-weight: 800;
+                font-size: 40px;
+                color: #fff;
+                text-transform: uppercase;
+                text-decoration: none;
+                display: flex;
+                justify-content: center;
+            }
+            div{
+                .main-menu{
+                    margin: 40px 0 40px 33px;
+                    .link{
+                        color: white;
+                        display: flex;
+                        align-items: center;
+                        font-family: $font2;
+                        font-weight: 600;
+                        text-decoration: none;
+                        .icon{
+                            margin-right: 7px;
+                            font-size: 22px;
+                        }
+                        span{
+                            font-size: 17px;
+                        }
+                        .span{
+                            margin-left: 3px;
+                            margin-right: 10px;
+                        }
+                    }
+                    button{
+                        background: none;
+                        border: none;
+                        color: white;
+                        display: flex;
+                        align-items: center;
+                        font-family: $font2;
+                        font-weight: 600;
+                        cursor: pointer;
+                        .icon{
+                            margin-right: 7px;
+                            font-size: 22px;
+                        }
+                        span{
+                            font-size: 17px;
+                        }
+                    }
+                    &:hover{
+                        transform: scale(1.1);
+                        opacity: 0.8;
+                        transition: 0.3s;
+                    }
+                }
+            }
+        }
+        .right-dashboard{
+            width: 100%;
+            nav{
+                height: 60px;
+                background: #fff;
+                display: flex;
+                align-items: center;
+                box-shadow: 1px 1px 1px grey;
+                .icon{
+                    font-size: 30px;
+                    cursor: pointer;
+                    margin-left: 7px;
+                }
+                p{
+                    font-family: $font2;
+                    font-size: 20px;
+                    font-weight: 700;
+                    margin-left: 3px;
+                }
+            }
+            section{
+                margin: 20px 10px;
+                height: 80vh;
+                background: #fff;
+                box-shadow: 1px 1px 1px grey;
+                border-radius: 25px;
+                overflow: auto;
+                main{
+                    padding: 15px 0 15px 20px;
+                    .p{
+                        font-size: 20px;
+                        font-family: $font2;
+                        font-weight: 700;
+                        border-bottom: 3px solid whitesmoke;
+                    }
+                    .main-dashboard{
+                        display: flex;
+                        flex-wrap: wrap;
+                        cursor: pointer;
+                        .content-dashboard{
+                            margin: 10px 0;
+                            background: #cc2b5e;  
+                            background: -webkit-linear-gradient(to left, #753a88, #cc2b5e); 
+                            background: linear-gradient(to left, #753a88, #cc2b5e); 
+                            box-shadow: 1px 1px 1px $bg;
+                            margin-left: 20px;
+                            border-radius: 15px;
+                            color: white;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            height: 130px;
+                            width: 230px;
+                            &:hover{
+                                opacity: 0.9;
+                                transition: 0.3s;
+                                transform: scale(1.1);
+                            }
+                            .content{
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                p{
+                                    font-size: 20px;
+                                    font-family: $font2;
+                                    font-weight: 700;
+                                }
+                                div{
+                                    font-family: $font2;
+                                    font-size: 19px;
+                                    font-weight: 700;
+                                }
+                            }
+                            .content2{
+                                .icon{
+                                    font-size: 40px;
+                                    margin-left: 30px;
+                                }
+                            }
+                        }
+                    }
+                }
+                .content-schedule{
+                    font-size: 20px;
+                    font-family: $font2;
+                    font-weight: 700;
+                    border-bottom: 3px solid whitesmoke;
+                }
+                .form-schedule{
+                    margin-top: 10px;
+                    width: 90%;
+                    margin-left: 15px;
+                    .error{
+                        color: red;
+                        font-family: $font2;
+                        font-size: 16px;
+                        font-weight: 700;
+                    }
+                    .main-form-schedule{
+                        margin: 15px 0;
+                        label{
+                            font-family: $font2;
+                            font-weight: 400;
+                            font-size: 16px;
+                            margin-left: 5px;
+                        }
+                        select{
+                            width: 100%;
+                            padding: 5px;
+                            border-radius: 5px;
+                            font-family: $font2;
+                            font-weight: 400;
+                            cursor: pointer;
+                            border: 1px solid grey;
+                            &:focus{
+                                outline: 1px solid #1565C0;
+                            }
+                        }
+                        input{
+                            width: 98.5%;
+                            padding: 5px;
+                            border-radius: 5px;
+                            font-family: $font2;
+                            font-weight: 400;
+                            border: 1px solid grey;
+                            &:focus{
+                                outline: 1px solid #1565C0;
+                            }
+                        }
+                    }
+                    button{
+                        background: #cc2b5e;  
+                        background: -webkit-linear-gradient(to left, #753a88, #cc2b5e); 
+                        background: linear-gradient(to left, #753a88, #cc2b5e); 
+                        border: none;
+                        color: white;
+                        font-family: $font2;
+                        font-weight: 700;
+                        font-size: 16px;
+                        padding: 4px 15px;
+                        border-radius: 7px;
+                        cursor: pointer;
+                        margin-top: 5px;
+                        &:hover{
+                            opacity: 0.8;
+                            transition: 0.3s;
+                        }
+                    }
+                }
+                .new-schedule{
+                    background: #cc2b5e;  
+                    background: -webkit-linear-gradient(to left, #753a88, #cc2b5e); 
+                    background: linear-gradient(to left, #753a88, #cc2b5e); 
+                    width: 180px;
+                    padding: 10px 0;
+                    border-radius: 7px;
+                    margin: 5px 0 10px 0;
+                    cursor: pointer;
+                    &:hover{
+                        opacity: 0.9;
+                        transition: 0.3s
+                    }
+                    .link{
+                        font-size: 16px;
+                        font-family: $font2;
+                        font-weight: 700;
+                        text-decoration: none;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        color: #fff;
+                        .icon{
+                            font-size: 20px;
+                        }
+                    }
+                }
+                .tuser{
+                    width: 200px;
+                }
+                .table{
+                    p{
+                        text-align: center;
+                        font-family: $font2;
+                        font-size: 20px;
+                        font-weight: 700;
+                        border-bottom: 3px solid whitesmoke;
+                        margin: 5px 0;
+                    }
+                    table{
+                        width: 90%;
+                        text-align: center;
+                        margin-left: 20px;
+                        border-collapse: collapse;
+                        thead{
+                            background: #536976;  
+                            background: -webkit-linear-gradient(to left, #292E49, #536976);  
+                            background: linear-gradient(to left, #292E49, #536976); 
+                            tr{
+                                th{
+                                    border: 1px solid #f1f1f1;
+                                    padding: 5px 0;
+                                    font-family: $font2;
+                                    font-weight: 700;
+                                    font-size: 18px;
+                                    color: white;
+                                }
+                            }
+                        }
+                        tbody{
+                            cursor: pointer;
+                            tr{
+                                &:hover{
+                                    background: #ddd;
+                                }
+                                td{
+                                    border: 1px solid #f1f1f1;
+                                    padding: 5px 0;
+                                    font-family: $font2;
+                                    font-weight: 400;
+                                    font-size: 16px;
+                                }
+                                .td{
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: space-evenly;
+                                    margin: auto;
+                                    width: 90px;
+                                    .link{
+                                        display: flex;
+                                        align-items: center;
+                                        background: blue;
+                                        padding: 3px 5px;
+                                        border-radius: 4px;
+                                        border: none;
+                                        color: white;
+                                        font-size: 22px;
+                                        &:hover{
+                                            opacity: 0.8;
+                                            transition: 0.3s;
+                                        }
+                                    }
+                                    button{
+                                        display: flex;
+                                        align-items: center;
+                                        background: red;
+                                        border: none;
+                                        padding: 3px 5px;
+                                        border-radius: 4px;
+                                        font-size: 22px;
+                                        color: white;
+                                        cursor: pointer;
+                                        &:hover{
+                                            opacity: 0.8;
+                                            transition: 0.3s;
+                                        }
+                                    }
+                                }
+                            }
+                            tr:nth-child(odd){
+                                background: #f2f2f2;
+                                &:hover{
+                                    background: #ddd;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.register{
+    background: #fc00ff; 
+    background: -webkit-linear-gradient(to right, #00dbde, #fc00ff);  
+    background: linear-gradient(to right, #00dbde, #fc00ff); 
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    form{
+        width: 350px;
+        margin-top: 10px;
+        p{
+            color: white;
+            font-size: 40px;
+            font-family: $font1;
+            font-weight: 800;
+            text-align: center;
+        }
+        .error{
+            font-family: $font2;
+            font-weight: 700;
+            font-size: 15px;
+            color: red;
+        }
+        .form-register{
+            margin-top: 10px;
+            input{
+                width: 90%;
+                background: none;
+                padding: 7px;
+                border-radius: 5px;
+                border: 1px solid $bg;
+                font-family: $font2;
+                font-weight: 500;
+                outline: none;
+                color: whitesmoke;
+                font-weight: 500;
+            }
+            ::-webkit-input-placeholder{
+                color: whitesmoke;
+            }
+            select{
+                outline: none;
+                width: 50%;
+                padding: 5px;
+                border-radius: 5px;
+                background: none;
+                border: 1px solid $bg;
+                font-family: $font2;
+                cursor: pointer;
+            }
+        }
+        button{
+            margin-top: 15px;
+            cursor: pointer;
+            width: 90%;
+            color: white;
+            font-family: $font2;
+            font-size: 25px;
+            border: none;
+            font-weight: 700;  
+            background: none;  
+            &:hover{
+                opacity: 0.8;
+                transition: 0.3s;
+            }
+        }
+    }
+}
