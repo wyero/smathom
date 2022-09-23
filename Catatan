@@ -3,3 +3,5 @@ register admin :
 
 database dibuat secara manual
 nama database : smathom_db
+
+database yang digunakan adalah database mysql dengan user root

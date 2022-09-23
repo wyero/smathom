@@ -1,18 +1,19 @@
 import React, { useState, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Me, Logout, reset } from '../../Features/authSlice'
-import axios from 'axios'
 import { Link, useNavigate } from 'react-router-dom'
 import {AiFillHome} from 'react-icons/ai'
 import {FaUserFriends, FaCalendarAlt} from 'react-icons/fa'
 import {BiLogOutCircle, BiMenu} from 'react-icons/bi'
+import axios from 'axios'
 
 const Dashboard = () => {
     const [open, setOpen] = useState(true)
     const dispatch = useDispatch()
     const navigate = useNavigate()
-    const [schedule, setSchedule] = useState([])
     const [users, setUsers] = useState([])
+    const [schedule, setSchedule] = useState([])
+
     const {isError, user} = useSelector((state: any)=>state.auth)
 
     useEffect(() => {
@@ -29,16 +30,16 @@ const Dashboard = () => {
         navigate('/')
     }
     useEffect(() => {
-        getCountSchedule()
         getCountUser()
+        getCountSchedule()
     }, [])
-    const getCountSchedule = async () => {
-        const response = await axios.get('http://localhost:8000/count-schedule')
-        setSchedule(response.data)
-    }
     const getCountUser = async () => {
         const response = await axios.get('http://localhost:8000/count-user')
         setUsers(response.data)
+    }
+    const getCountSchedule = async () => {
+        const response = await axios.get('http://localhost:8000/count-schedule')
+        setSchedule(response.data)
     }
   return (
     <div className='dashboard'>
@@ -87,7 +88,7 @@ const Dashboard = () => {
                         <div className="main-dashboard">
                             <div className="content-dashboard">
                                 {schedule.map((schedule: any) => (
-                                    <div className="content" key={schedule.id}>
+                                    <div className="content" key={schedule.data}>
                                         <p>{schedule.data}</p>
                                         <div>Jadwal</div>
                                         <div>Pembelajaran</div>
@@ -98,19 +99,17 @@ const Dashboard = () => {
                                 </div>
                             </div>
                             {user && user.role === "Admin" && (
-                                <>
-                                {users.map((users: any) => (
-                                    <div className="content-dashboard">
-                                        <div className="content" key={users.id}>
+                                 <div className="content-dashboard">
+                                    {users.map((users: any) => (
+                                        <div className="content" key={users.data}>
                                             <p>{users.data}</p>
                                             <div>Pengguna</div>
                                         </div>
-                                        <div className="content2">
-                                            <FaUserFriends className='icon'/>
-                                        </div>
+                                    ))}
+                                    <div className="content2">
+                                        <FaUserFriends className='icon'/>
                                     </div>
-                                ))}
-                                </>
+                                </div>
                             )}
                         </div>
                     </main>
